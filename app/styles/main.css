@@ -1313,24 +1313,24 @@ pre {
   max-height: 340px;
   overflow-y: scroll; }
 
-.container, .container-full {
+.container {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px; }
-  .container:before, .container-full:before, .container:after, .container-full:after {
+  .container:before, .container:after {
     content: " ";
     display: table; }
-  .container:after, .container-full:after {
+  .container:after {
     clear: both; }
   @media (min-width: 768px) {
-    .container, .container-full {
+    .container {
       width: 750px; } }
   @media (min-width: 992px) {
-    .container, .container-full {
+    .container {
       width: 970px; } }
   @media (min-width: 1200px) {
-    .container, .container-full {
+    .container {
       width: 1170px; } }
 
 .container-fluid {
@@ -3411,17 +3411,15 @@ tbody.collapse.in {
     .navbar-fixed-bottom .navbar-collapse {
       max-height: 200px; } }
 
-.container > .navbar-header, .container-full > .navbar-header,
+.container > .navbar-header,
 .container > .navbar-collapse,
-.container-full > .navbar-collapse,
 .container-fluid > .navbar-header,
 .container-fluid > .navbar-collapse {
   margin-right: -15px;
   margin-left: -15px; }
   @media (min-width: 768px) {
-    .container > .navbar-header, .container-full > .navbar-header,
+    .container > .navbar-header,
     .container > .navbar-collapse,
-    .container-full > .navbar-collapse,
     .container-fluid > .navbar-header,
     .container-fluid > .navbar-collapse {
       margin-right: 0;
@@ -3465,7 +3463,7 @@ tbody.collapse.in {
   .navbar-brand > img {
     display: block; }
   @media (min-width: 768px) {
-    .navbar > .container .navbar-brand, .navbar > .container-full .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: -15px; } }
 
 .navbar-toggle {
@@ -3976,14 +3974,14 @@ a.badge:hover, a.badge:focus {
     font-weight: 200; }
   .jumbotron > hr {
     border-top-color: #d5d5d5; }
-  .container .jumbotron, .container-full .jumbotron, .container-fluid .jumbotron {
+  .container .jumbotron, .container-fluid .jumbotron {
     border-radius: 6px; }
-  .jumbotron .container, .jumbotron .container-full {
+  .jumbotron .container {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
     .jumbotron {
       padding: 48px 0; }
-      .container .jumbotron, .container-full .jumbotron, .container-fluid .jumbotron {
+      .container .jumbotron, .container-fluid .jumbotron {
         padding-left: 60px;
         padding-right: 60px; }
       .jumbotron h1,
@@ -5370,85 +5368,73 @@ button.close {
 @media print {
   .hidden-print {
     display: none !important; } }
-@media (min-width: 768px) {
-  .container-full {
-    width: 100; } }
-@media (min-width: 992px) {
-  .container-full {
-    width: 100; } }
-@media (min-width: 1200px) {
-  .container-full {
-    width: 100; } }
-
-.browsehappy {
+/*.browsehappy {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
-  padding: 0.2em 0; }
-
+  padding: 0.2em 0;
+}*/
 /* Space out content a bit */
-body {
+/*body {
   padding-top: 20px;
-  padding-bottom: 20px; }
-
+  padding-bottom: 20px;
+}*/
 /* Everything but the jumbotron gets side spacing for mobile first views */
-.header,
+/*.header,
 .marketing,
 .footer {
   padding-left: 15px;
-  padding-right: 15px; }
-
+  padding-right: 15px;
+}*/
 /* Custom page header */
-.header {
-  border-bottom: 1px solid #e5e5e5;
-  /* Make the masthead heading the same height as the navigation */ }
-  .header h3 {
-    margin-top: 0;
-    margin-bottom: 0;
-    line-height: 40px;
-    padding-bottom: 19px; }
-
+/* Make the masthead heading the same height as the navigation */
 /* Custom page footer */
-.footer {
+/*.footer {
   padding-top: 19px;
   color: #777;
-  border-top: 1px solid #e5e5e5; }
-
-.container-narrow > hr {
-  margin: 30px 0; }
-
+  border-top: 1px solid #e5e5e5;
+}*/
+/*.container-narrow > hr {
+  margin: 30px 0;
+}*/
 /* Main marketing message and sign up button */
-.jumbotron {
+/*.jumbotron {
   text-align: center;
-  border-bottom: 1px solid #e5e5e5; }
-  .jumbotron .btn {
-    font-size: 21px;
-    padding: 14px 24px; }
+  border-bottom: 1px solid #e5e5e5;
 
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}*/
 /* Supporting marketing content */
-.marketing {
-  margin: 40px 0; }
-  .marketing p + h4 {
-    margin-top: 28px; }
+/*.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-  .container, .container-full {
-    max-width: 730px; }
-
+  /*.container {
+    max-width: 730px;
+  }*/
   /* Remove the padding we set earlier */
-  .header,
+  /*.header,
   .marketing,
   .footer {
     padding-left: 0;
-    padding-right: 0; }
-
+    padding-right: 0;
+  }*/
   /* Space out the masthead */
-  .header {
-    margin-bottom: 30px; }
-
+  /*.header {
+    margin-bottom: 30px;
+  }*/
   /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0; } }
+  /*.jumbotron {
+    border-bottom: 0;
+  }*/ }
 
 /*# sourceMappingURL=main.css.map */
