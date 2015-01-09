@@ -1,11 +1,11 @@
 $icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
 $fa-font-path:   "../fonts/font-awesome-4.2.0/fonts";
 // bower:scss
-@import "../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import "variables/variables.scss";
-//@import "components/components.scss";
+@import "components/components.scss";
 @import "../fonts/font-awesome-4.2.0/scss/font-awesome.scss";
 
 // commento provvisorio
@@ -82,7 +82,8 @@ $fa-font-path:   "../fonts/font-awesome-4.2.0/fonts";
 }*/
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+// commento provvisorio
+//@media screen and (min-width: 768px) {
   /*.container {
     max-width: 730px;
   }*/
@@ -107,4 +108,4 @@ $fa-font-path:   "../fonts/font-awesome-4.2.0/fonts";
   /*.jumbotron {
     border-bottom: 0;
   }*/
-}
+//}
