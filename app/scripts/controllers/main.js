@@ -16,7 +16,7 @@ angular.module('restFeV2App')
     ];
 
     $scope.ass_ipca = null;
-    $scope.hash = "";
+    $scope.hash = '';
     var payload = {};
 
     // ok
@@ -77,6 +77,7 @@ angular.module('restFeV2App')
         "ass_tel": $scope.ass_tel,
         "ass_email": $scope.ass_email
       };
+      console.log("Questo è il payload che verrà salvato:");
       console.log(JSON.stringify(payload));
       MainSrvc.postData({},  payload,//$scope.allPatientsData,
         function (data) {
@@ -94,7 +95,8 @@ angular.module('restFeV2App')
     $scope.edit = function () {
       //http://stackoverflow.com/questions/8668174/indexof-method-in-an-object-array
       var i = arrayObjectIndexOf($scope.allPatientsData, $scope.hash, "$$hashKey");
-      console.log("Indice: "+ i);
+      console.log("Indice patient: "+ i);
+      console.log("Valore ass_ipca: "+ $scope.ass_ipca);
       $scope.allPatientsData.splice(i, 1); //rimuovo l'elemento
       $scope.createOrUpdate(); //lo aggiungo ex-novo
       $scope.editRecord = false;
@@ -104,6 +106,7 @@ angular.module('restFeV2App')
 
     $scope.editRecord = false;
     $scope.editItem = function (data) {
+      console.log("Copio il record nel payload...");
       var payload = {
         "ass_ipca": data.ass_ipca,
         "ass_cogn": data.ass_cogn,
@@ -111,6 +114,7 @@ angular.module('restFeV2App')
         "ass_tel": data.ass_tel,
         "ass_email": data.ass_email
       };
+      console.log(JSON.stringify(payload));
       $scope.ass_ipca = data.ass_ipca;
       $scope.hash =  data.$$hashKey;
       $scope.editRecord = true;
@@ -121,6 +125,7 @@ angular.module('restFeV2App')
 
       console.log("HASH:" + $scope.hash);
       //console.log(JSON.stringify($scope.allPatientsData));
+      console.log("Copio il record in $scope ...");
     }
 
     function arrayObjectIndexOf(myArray, searchTerm, property) {
