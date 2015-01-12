@@ -12,6 +12,7 @@
           <th ng-click="click('ass_ipca')"># <i ng-class="(reverse == true) ? 'fa fa-caret-down' : 'fa fa-caret-up'"></i></th>
           <th>Cognome</th>
           <th>Nome</th>
+          <th>Data nascita</th>
           <th>Numero Telefono</th>
           <th>Email<input ng-model="mailSearch"></th>
           <th>Modifica</th> <!-- intestazione del "modifica" -->
@@ -23,6 +24,7 @@
           <td>{{data.ass_ipca}}</td>
           <td>{{data.ass_cogn}}</td>
           <td>{{data.ass_nome}}</td>
+          <td>{{data.ass_datna}}</td>
           <td>{{data.ass_tel}}</td>
           <td>{{data.ass_email}}</td>
           <td><i class="fa fa-pencil" ng-click="editItem(data)"></i></td>

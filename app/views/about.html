@@ -1,1 +1,13 @@
 <p>Questa è la vista about.</p>
+
+<div ng-controller="MainCtrl">
+  <table ng-table class="table">
+    <tr ng-repeat="data in allPatientsData">
+      <td data-title="'Nome'">{{data.ass_nome}}</td>
+      <td data-title="'Cognome'">{{data.ass_cogn}}</td>
+      <td data-title="'Data nascita'">{{data.ass_datna}}</td>
+      <td data-title="'Telefono'">{{data.ass_tel}}</td>
+      <td data-title="'Email'">{{data.ass_email}}</td>
+    </tr>
+  </table>
+</div>
