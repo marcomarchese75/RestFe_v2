@@ -6,7 +6,7 @@
 angular.module('restFeV2App')
   .factory('MainSrvc', function ($resource) {
 
-    return $resource('http://10.70.21.26:18080/RestBE/webresources/rest/patient/:id',{id:'@_id'}, {
+    return $resource('http://localhost:18080/RestBeV2/webresources/rest/patient/:id',{id:'@_id'}, {
       getData: {
         method:'GET',
         isArray: false

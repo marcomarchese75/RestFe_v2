@@ -1,6 +1,6 @@
 <p>Questa è la vista about.</p>
 
-<div ng-controller="MainCtrl">
+<div ng-controller="TableCtrl">
   <table ng-table class="table">
     <tr ng-repeat="data in allPatientsData">
       <td data-title="'Nome'">{{data.ass_nome}}</td>
@@ -8,6 +8,7 @@
       <td data-title="'Data nascita'">{{data.ass_datna}}</td>
       <td data-title="'Telefono'">{{data.ass_tel}}</td>
       <td data-title="'Email'">{{data.ass_email}}</td>
+      <td data-title="'Nazionalità'">{{data.ass_citta}}</td>
     </tr>
   </table>
 </div>
