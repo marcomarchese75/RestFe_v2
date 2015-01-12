@@ -53,7 +53,8 @@ angular.module('restFeV2App')
         "ass_nome": $scope.ass_nome,
         "ass_tel": $scope.ass_tel,
         "ass_email": $scope.ass_email,
-        "ass_datna" : $scope.ass_datna
+        "ass_datna" : $scope.ass_datna,
+        "ass_citta" : $scope.ass_citta
       };
       if($scope.ass_ipca != null)
         payload.ass_ipca= $scope.ass_ipca;
@@ -77,7 +78,8 @@ angular.module('restFeV2App')
         "ass_nome": $scope.ass_nome,
         "ass_tel": $scope.ass_tel,
         "ass_email": $scope.ass_email,
-        "ass_datna": $scope.ass_datna
+        "ass_datna": $scope.ass_datna,
+        "ass_citta": $scope.ass_citta
       };
       console.log("Questo è il payload che verrà salvato:");
       console.log(JSON.stringify(payload));
@@ -115,7 +117,8 @@ angular.module('restFeV2App')
         "ass_nome": data.ass_nome,
         "ass_tel": data.ass_tel,
         "ass_email": data.ass_email,
-        "ass_datna": data.ass_datna
+        "ass_datna": data.ass_datna,
+        "ass_citta": data.ass_citta
       };
       console.log(JSON.stringify(payload));
       $scope.ass_ipca = data.ass_ipca;
@@ -126,6 +129,7 @@ angular.module('restFeV2App')
       $scope.ass_tel= data.ass_tel;
       $scope.ass_email=data.ass_email;
       $scope.ass_datna=data.ass_datna;
+      $scope.ass_citta=data.ass_citta;
 
       console.log("HASH:" + $scope.hash);
       //console.log(JSON.stringify($scope.allPatientsData));
