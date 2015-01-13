@@ -12,6 +12,9 @@ angular.module('restFeV2App')
   .controller('TableCtrl', function($scope, $timeout, MainSrvc, $filter,  ngTableParams) {
     $scope.allPatientsData = MainSrvc.query();
 
+    console.log("Valori contenuti in $scope.allPatientsData in TableCtrl...");
+    console.log(JSON.stringify($scope.allPatientsData));
+
     $scope.patients = new ngTableParams({
       page: 1,            // show first page
       count: 10,          // count per page
