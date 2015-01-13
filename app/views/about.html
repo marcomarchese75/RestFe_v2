@@ -1,11 +1,12 @@
-<p>Questa è la vista about.</p>
+<p>Questa è la vista about di Marco Marchese.</p>
 
 <div class="row-fluid">
   <div class="col-lg-8">
     <div ng-controller="TableCtrl">
-      <table ng-table class="table">
+      <table ng-table="patients" class="table">
         <tr ng-repeat="data in allPatientsData">
-          <td data-title="'Nome'">{{data.ass_nome}}</td>
+          <td data-title="'Ass_ipca'">{{data.ass_ipca}}</td>
+          <td data-title="'Nome'" sortable="'ass_nome'">{{data.ass_nome}}</td>
           <td data-title="'Cognome'">{{data.ass_cogn}}</td>
           <td data-title="'Data nascita'">{{data.ass_datna}}</td>
           <td data-title="'Telefono'">{{data.ass_tel}}</td>
@@ -16,6 +17,7 @@
     </div>
   </div>
   <div class="col-lg-4">
-    <!-- Inserire codice per testare directive e filter -->
+    <button ng-click="patients.sorting({})" class="btn btn-default pull-right">Annulla ordinamento</button>
+    <p><strong>Ordinamento:</strong> {{patients.sorting()|json}}
   </div>
 </div>

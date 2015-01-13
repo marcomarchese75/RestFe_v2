@@ -9,7 +9,7 @@ angular.module('restFeV2App')
     return $resource('http://localhost:18080/RestBeV2/webresources/rest/patient/:id',{id:'@_id'}, {
       getData: {
         method:'GET',
-        isArray: false
+        isArray: true
       },
       postData: {
         method:'POST'

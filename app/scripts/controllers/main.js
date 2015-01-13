@@ -8,7 +8,7 @@
  * Controller of the restFeV2App
  */
 angular.module('restFeV2App')
-  .controller('MainCtrl', function ($scope, $timeout, MainSrvc) {
+  .controller("MainCtrl", function ($scope, $timeout, MainSrvc) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -22,7 +22,8 @@ angular.module('restFeV2App')
     // ok
     $scope.allPatientsData = MainSrvc.query();
 
-    //console.log(JSON.stringify($scope.allPatientsData));
+    console.log("Valori contenuti in $scope.allPatientsData in MainCtrl...");
+    console.log(JSON.stringify($scope.allPatientsData));
 
     // ok
     $scope.reverse = false;
@@ -59,6 +60,7 @@ angular.module('restFeV2App')
       if($scope.ass_ipca != null)
         payload.ass_ipca= $scope.ass_ipca;
 
+      console.log("Valori del payload in $scope.createOrUpdate");
       console.log(JSON.stringify(payload));
 
       $scope.allPatientsData.push(payload);
@@ -68,7 +70,8 @@ angular.module('restFeV2App')
        $scope.ass_cogn = null;
        $scope.ass_tel = null;*/
 
-      //console.log(JSON.stringify($scope.allPatientsData));
+      console.log("Valori di $scope.allPatientsData in $scope.createOrUpdate");
+      console.log(JSON.stringify($scope.allPatientsData));
     }
 
     $scope.saveOnDB = function (data) {
@@ -120,6 +123,7 @@ angular.module('restFeV2App')
         "ass_datna": data.ass_datna,
         "ass_citta": data.ass_citta
       };
+      console.log("Valori copiati nel payload in editItem");
       console.log(JSON.stringify(payload));
       $scope.ass_ipca = data.ass_ipca;
       $scope.hash =  data.$$hashKey;

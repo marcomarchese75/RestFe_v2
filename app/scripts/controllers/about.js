@@ -14,4 +14,5 @@ angular.module('restFeV2App')
       'AngularJS',
       'Karma'
     ];
+
   });
